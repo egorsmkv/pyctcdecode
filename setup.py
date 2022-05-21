@@ -15,7 +15,7 @@ def read_file(filename: str) -> str:
     # intentionally *not* adding an encoding option to open, see here:
     # https://github.com/pypa/virtualenv/issues/201#issuecomment-3145690
     here = os.path.abspath(os.path.dirname(__file__))
-    with codecs.open(os.path.join(here, "pyctcdecode", filename), "r") as f:
+    with codecs.open(os.path.join(here, "pyctcdecode", filename), "r", encoding='utf-8') as f:
         return f.read()
 
 
